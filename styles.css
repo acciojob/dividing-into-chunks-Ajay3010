@@ -1,1 +1,35 @@
 /*  your css code here. If applicable */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  margin: 20px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subarray {
+  background-color: #e0f7fa;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-left: 4px solid #00796b;
+  border-radius: 4px;
+}
+
+.subarray span {
+  margin-right: 8px;
+  font-weight: bold;
+  color: #004d40;
+}

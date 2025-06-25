@@ -1,8 +1,27 @@
-const arr = [1, 2, 3, 4, 1, 0, 2, 2];
+function divide(arr, n) {
+  const result = [];
+  let subarray = [];
+  let currentSum = 0;
 
-const divide = (arr, n) => {
-  // Write your code here
-};
+  for (let i = 0; i < arr.length; i++) {
+    // Check if adding current element stays within the max sum
+    if (currentSum + arr[i] <= n) {
+      subarray.push(arr[i]);
+      currentSum += arr[i];
+    } else {
+      // Push the current subarray and start a new one
+      if (subarray.length > 0) {
+        result.push(subarray);
+      }
+      subarray = [arr[i]];
+      currentSum = arr[i];
+    }
+  }
 
-const n = prompt("Enter n: ");
-alert(JSON.stringify(divide(arr, n)));
+  // Push any remaining subarray
+  if (subarray.length > 0) {
+    result.push(subarray);
+  }
+
+  return result;
+}
